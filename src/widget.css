@@ -1,0 +1,10 @@
+.widget {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.widget iframe {
+    margin-top: 30px;
+}

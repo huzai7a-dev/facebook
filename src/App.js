@@ -1,24 +1,31 @@
-import logo from './logo.svg';
+import React,{useState} from 'react';
 import './App.css';
+import Feed from './Feed';
+import Header from './header';
+import Login from './Login';
+import Sidebar from './Sidebar';
+import Widget from './Widget';
 
 function App() {
+  const [user, setUser] = useState("");
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+    <div className="app">
+    {
+      !user ? (<Login data={setUser}/>)
+      :(
+        <div>
+          <Header data={user}/>
+          <div className="app__body">
+            <Sidebar data={user}/>
+            <Feed data={user} />
+            <Widget data={user}/>  
+          </div>
+        </div>
+      )
+    }
+    </div>       
   );
 }
 

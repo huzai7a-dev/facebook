@@ -1,0 +1,31 @@
+.story {
+    display: flex;
+    cursor: pointer;
+}
+.storyRow {
+    height: 200px;
+    width: 120px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 10px;
+    box-shadow: 0px 5px 9px 1px rgba(0,0,0,0.5);
+    position: relative;
+    transition: .5s ease;
+    border-radius: 5px;
+    margin: 0px 10px;
+}
+.storyRow:hover {
+    transform: scale(1.07);
+}
+.storyRow .MuiAvatar-root {
+    border: 4px solid #2e81f4;
+    border-radius: 50%;
+}
+.storyRow h4 {
+    font-weight: 600;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
